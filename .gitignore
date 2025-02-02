@@ -1,0 +1,32 @@
+# Ambientes Virtuais
+env/
+venv/
+
+# PyCharm
+.idea/
+
+# Arquivos compilados do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs e arquivos temporários
+logs/
+*.log
+*.tmp
+*.swp
+
+# Banco de Dados SQLite (caso use)
+*.sqlite3
+db.sqlite3
+
+# Dependências locais
+pip-wheel-metadata/
+
+# Pytest
+.cache/
+.pytest_cache/
+
+# VS Code
+.vscode/

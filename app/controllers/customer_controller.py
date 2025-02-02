@@ -17,7 +17,6 @@ def list_customers():
 def add_customer():
     data = request.json
 
-    # Verificar se o e-mail já está cadastrado
     existing_customer = Customer.query.filter_by(cpf=data['cpf']).first()
     if existing_customer:
         return jsonify({"error": "Customer with this cpf already exists"}), 400
@@ -52,7 +51,6 @@ def update_customer(customer_id):
     if not customer:
         return jsonify({"error": "Customer not found"}), 404
 
-    # Atualizar os dados do cliente
     customer.name = data.get('name', customer.name)
     customer.cpf = data.get('cpf', customer.cpf)
     customer.phone = data.get('phone', customer.phone)

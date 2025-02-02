@@ -24,8 +24,8 @@ def add_table():
     db.session.commit()
     return jsonify({"message": "Table added successfully!"}), 201
 
-def get_table(table_id):
-    table = Table.query.filter_by(number=table_id).first()
+def get_table(table_number):
+    table = Table.query.filter_by(number=table_number).first()
     if not table:
         return jsonify({"error": "Table not found"}), 404
 

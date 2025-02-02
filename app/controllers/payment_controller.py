@@ -29,7 +29,6 @@ def add_payment():
     if Payment.query.filter_by(order_id=order.id).first():
         return jsonify({"error": "Payment for this order already exists"}), 400
 
-    # Criar o pagamento
     payment = Payment(
         order_id=order.id,
         payment_method=data['payment_method']
@@ -41,7 +40,7 @@ def add_payment():
     db.session.commit()
 
     return jsonify({
-        "message": "Payment added successfully!",
+        "message": "Payment added successfully",
         "order_id": order.id,
         "order_total_amount": order.total_amount
     }), 201
@@ -66,12 +65,11 @@ def update_payment(payment_id):
     if not payment:
         return jsonify({"error": "Payment not found"}), 404
 
-    # Atualizar o método de pagamento
     payment.payment_method = data.get('payment_method', payment.payment_method)
     payment.date = data.get('date', payment.date)
     db.session.commit()
 
-    return jsonify({"message": "Payment updated successfully!"}), 200
+    return jsonify({"message": "Payment updated successfully"}), 200
 
 def delete_payment(payment_id):
     payment = Payment.query.get(payment_id)
@@ -85,4 +83,4 @@ def delete_payment(payment_id):
     db.session.delete(payment)
     db.session.commit()
 
-    return jsonify({"message": "Payment deleted successfully!"}), 200
+    return jsonify({"message": "Payment deleted successfully"}), 200
