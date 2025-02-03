@@ -1,6 +1,6 @@
 # BarBuddy Project
 
-**BarBuddy** é um sistema backend para gerenciamento de comandas e pedidos em bares ou restaurantes, desenvolvido em **Python** utilizando o framework **Flask** e SQLAlchemy como ORM.
+**BarBuddy** é um sistema backend para gerenciamento de comandas e pedidos em bares ou restaurantes. É a versão 1.0 do projeto, desenvolvido em **Python** utilizando o framework **Flask** e SQLAlchemy como ORM.
 
 ---
 
@@ -87,7 +87,7 @@ BarBuddy Project/
 
 ### 1. Clone o repositório:
 ```bash
-git clone https://github.com/adriel-coder/Bar-Buddy.git
+git clone https://github.com/adriel-coder/BarBuddy-Flask.git
 cd Bar-Buddy
 ```
 
