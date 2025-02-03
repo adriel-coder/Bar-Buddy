@@ -24,8 +24,10 @@
 - **Framework**: Flask
 - **Banco de Dados**: MySQL
 - **ORM**: SQLAlchemy
-- **Biblioteca Adicional**:
-  - `Flask-SQLAlchemy` para abstração do banco de dados
+- **Bibliotecas Adicionais**:
+  - `Flask-SQLAlchemy` → abstração do banco de dados
+  - `PyMySQL` → driver para MySQL
+  - `Pytest` → testes automatizados
 
 ---
 
@@ -119,9 +121,30 @@ O servidor estará disponível em: [http://127.0.0.1:5000](http://127.0.0.1:5000
 
 ---
 
-## Testes
+## Testes Unitários
 
-Atualmente, o sistema não possui uma suite de testes automatizados. Recomenda-se utilizar ferramentas como **pytest** ou **unittest** para validação futura.
+Os testes automatizados são feitos utilizando pytest. Para executar todos os testes da aplicação, utilize:
+
+```bash
+pytest app/tests/
+```
+
+Para rodar um teste específico, execute:
+
+```bash
+pytest app/tests/nome_do_arquivo_test.py
+```
+
+Os testes garantem a integridade das principais funcionalidades, incluindo:
+✅ Gerenciamento de pedidos, produtos, clientes, garçons e mesas.
+✅ Testes de CRUD (Create, Read, Update, Delete).
+✅ Validação de regras de negócio.
+
+Se quiser rodar os testes sem capturar a saída do terminal, utilize:
+
+```bash
+pytest -s app/tests/
+```
 
 ---
 
