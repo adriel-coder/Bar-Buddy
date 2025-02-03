@@ -63,6 +63,16 @@ BarBuddy Project/
 │   │   ├── waiter_routes.py
 │   │   ├── table_routes.py
 │   │   └── product_routes.py
+|   ├── tests/               # Testes unitários
+│   │   ├── __init__.py
+│   │   ├── conftest.py
+│   │   ├── order_test.py
+│   │   ├── category_test.py
+│   │   ├── customer_test.py
+│   │   ├── payment_test.py
+│   │   ├── waiter_test.py
+│   │   ├── table_test.py
+│   │   └── product_test.py
 │   └── config.py            # Configurações da aplicação
 ├── run.py                   # Ponto de entrada da aplicação
 ├── requirements.txt         # Dependências do projeto
@@ -75,8 +85,8 @@ BarBuddy Project/
 
 ### 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/barbuddy-project.git
-cd barbuddy-project
+git clone https://github.com/adriel-coder/Bar-Buddy.git
+cd Bar-Buddy
 ```
 
 ### 2. Crie e ative um ambiente virtual:
@@ -86,7 +96,7 @@ python -m venv venv
 
 # Ativar o ambiente virtual
 # No Windows:
-venv\Scriptsctivate
+venv\Scripts\activate
 # No Linux/Mac:
 source venv/bin/activate
 ```
@@ -97,7 +107,7 @@ pip install -r requirements.txt
 ```
 
 ### 4. Configure o banco de dados:
-- Tenha um servidor MySQL instalado, o banco de dados será criado automaticamente se não existir.
+- Tenha um servidor MySQL instalado e crie o banco de dados 'bar_buddy' se não existir.
 - Atualize o arquivo `app/config.py` com as credenciais do seu banco de dados.
 
 ### 5. Execute o servidor:
