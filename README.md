@@ -136,9 +136,9 @@ pytest app/tests/nome_do_arquivo_test.py
 ```
 
 Os testes garantem a integridade das principais funcionalidades, incluindo:
-✅ Gerenciamento de pedidos, produtos, clientes, garçons e mesas.
-✅ Testes de CRUD (Create, Read, Update, Delete).
-✅ Validação de regras de negócio.
+- Gerenciamento de pedidos, produtos, clientes, garçons e mesas.
+- Testes de CRUD (Create, Read, Update, Delete).
+- Validação de regras de negócio.
 
 Se quiser rodar os testes sem capturar a saída do terminal, utilize:
 
